@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class Calculadora {
     public static void main(String[] args) {
+        operacionesAritmeticas();
         ecuacionCuadratica();
-
     }
 
     public static void operacionesAritmeticas() {
@@ -86,7 +86,7 @@ public class Calculadora {
         return (float) Math.pow(num1,num2);
     }
     public static float calcularPorcentaje(float num1, float num2){
-        System.out.println("Tiene un porcentaje de: ");
+        System.out.println(num1+ " con respecto a "+ num2 + " tiene un porcentaje de: ");
         return num1*100/num2;
     }
     public static double ecuacion1(double a, double b, double c){
