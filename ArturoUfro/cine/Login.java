@@ -29,26 +29,22 @@ public class Login {
         Admin perfilAdmin = new Admin("admin","1234",true);
         return perfilAdmin;
     }
-    public static Usuario crearUsuarioComun(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Ingrese su nombre");
-        String nombre = sc.next();
-        System.out.println("Ingrese su clave");
-        String clave = sc.next();
-        Usuario perfilComun = new Usuario(nombre,clave,false);
-        return perfilComun;
-    }
 
     public static boolean iniciarSesion(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Ingrese su nombre");
+        System.out.println("BIENVIENIDO!!");
+        System.out.println("A continuacion inicie sesion");
+        System.out.println("Ingrese su nombre: ");
         String nombre = sc.next();
-        System.out.println("Ingrese su clave");
+        System.out.println("Ingrese su clave: ");
         String clave = sc.next();
-        if (nombre=="admin"&& clave=="1234"){
+        System.out.println(crearUsuarioAdmin().getUsuario());
+        System.out.println(nombre);
+        if (nombre.equals(crearUsuarioAdmin().getUsuario()) && clave.equals(crearUsuarioAdmin().getContrasena())){
             return true;
         }
         else{
+            Usuario perfilComun = new Usuario(nombre,clave,false);
             return false;
         }
 
